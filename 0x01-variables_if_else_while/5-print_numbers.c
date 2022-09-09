@@ -13,6 +13,7 @@ int main(void)
 	{
 		printf("%u", n);
 		n++;
+		printf("\n");
 	}
 	return (0);
 }

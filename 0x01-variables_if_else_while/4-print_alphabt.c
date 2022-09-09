@@ -3,7 +3,7 @@
 /**
 *main - This is for the letters
 *
-*Return: 
+*Return:Always 0 (success)
 */
 int main(void)
 {

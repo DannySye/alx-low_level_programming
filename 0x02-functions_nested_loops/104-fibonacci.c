@@ -10,6 +10,7 @@ int main(void)
 	int count;
 	unsigned long i, j, k;
 	unsigned long m, n, p;
+
 	carry;
 	count = 0;
 	i = 0;
@@ -30,8 +31,8 @@ int main(void)
 	while (count <= 98)
 	{
 	carry = (m + n) / 1000;
-	p = (m + n) -carry * 1000;
-	k = (i + j) +carry;
+	p = (m + n) - carry * 1000;
+	k = (i + j) + carry;
 	m = n;
 	n = p;
 	i = j;

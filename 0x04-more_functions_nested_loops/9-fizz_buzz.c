@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
 *main - This is the main body
 *Return:Always 0
 */

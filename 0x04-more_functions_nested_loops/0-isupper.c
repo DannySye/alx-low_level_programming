@@ -1,18 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-*
-*
+*_isupper - This is to test fot
+*@c: Character to be usd
 *Return:Always 0
 */
-int _supper(int c)
+int _isupper(int c)
 {
-	char c;
-
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
-	return (0);
+	if ((c >= 'A') && (c <= 'Z'))
+	return (1);
+return (0);
 }

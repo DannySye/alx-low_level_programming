@@ -2,7 +2,7 @@
 
 /**
 *_strlen - this is to print the stringlen
-*
+*@i:
 *@s:the string
 *Return: is i
 */

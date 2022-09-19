@@ -1,9 +1,5 @@
 #include "main.h"
 
-/**
-*_puts - Called function for puts
-*@str:char
-*/
 void _puts(char *str)
 {
 	int i = 0;

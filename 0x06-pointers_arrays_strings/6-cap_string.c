@@ -2,27 +2,33 @@
 
 /**
 *cap_string - called function
-*@s: called string
-*Return: s
+*@str: string
+*Return: str
 */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i = 0, j;
-	int lc[] = {97, 101, 111, 116, 108};
-	int cp[] = {65, 69, 79, 84, 76};
-	int m[] = {52, 51, 48, 55, 49};
+	int i;
+	int j;
+	char c[] = {44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 32, 10, 9};
 
-	while (s[i] != '\0')
+	i = 0;
+
+	while (str[i] != '\0')
 	{
-		for (j = 0; j < 5; j++)
+		if (i == 0 && str[i] >= 97 && str[i] <= 122)
 		{
-			if (s[i] == lc[j] || s[i] == cp[j])
+			str[i] = str[i] - 32;
+		}
+		j = 0;
+		while (c[j] != '\0')
+		{
+			if (c[j] == str[i] && (str[i + 1] >= 97 && str[i + 1] <= 122))
 			{
-				s[i] = m[j];
-				break;
+				str[i + 1] = str[i + 1] - 32;
 			}
+			j++;
 		}
 		i++;
 	}
-	return (s);
+	return (str);
 }

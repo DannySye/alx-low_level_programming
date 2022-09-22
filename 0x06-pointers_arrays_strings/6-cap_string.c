@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-*leet - called function
+*cap_string - called function
 *@s: called string
 *Return: s
 */
-char *leet(char *s)
+char *cap_string(char *s)
 {
 	int i = 0, j;
 	int lc[] = {97, 101, 111, 116, 108};

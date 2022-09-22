@@ -5,18 +5,18 @@
 *@str:for the string
 *Return: str
 */
-char *string_toupper(char *st)
+char *string_toupper(char *str)
 {
 	int i;
 
 	i = 0;
-	while (st[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (st[i] >= 97 && st[i] <= 122)
+		if (str[i] >= 97 && str[i] <= 122)
 		{
-			st[i] = st[i] -32;
+			str[i] = str[i] -32;
 		}
 		i++;
 	}
-	return (st);
+	return (str);
 }

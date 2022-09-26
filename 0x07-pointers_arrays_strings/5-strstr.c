@@ -12,7 +12,7 @@ char *_strstr(char *naystack, char *needle)
 	char *a, *b;
 
 	b = needle;
-	if (b == 0)
+	if (*b == 0)
 	{
 		return ((char *)naystack);
 	}

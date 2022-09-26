@@ -8,13 +8,13 @@
 */
 void print_diagsums(int *a, int size)
 {
-	int m, add1 = 0, add2 = 0;
+	int m, d1 = 0, d2 = 0;
 
 	for (m = 0; m < size; m++)
 	{
-		add1 = add1 + *(a + (size * m + 1));
-		add2 = add2 + *(a + (size * m + size - 1 - m));
+		d1 =+ *(a + (size * m + 1));
+		d2 =+ *(a + (size * m + size - 1 - m));
 	}
-	printf("%d, ", add1);
-	printf("%d\n", add2);
+	printf("%d, ", d1);
+	printf("%d\n", d2);
 }

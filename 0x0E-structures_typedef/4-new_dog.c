@@ -1,52 +1,47 @@
-include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 #include <stdio.h>
-
 /**
- * new_dog - creates a new dog.
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
- * Return: newdog
- */
-
+*new_dog - creates a new dog
+*@name:name of dog
+*@age:age of dog
+*@owner:owner of dog
+*
+*Return: new dog
+*/
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
-	int i = 0, j = 0, k;
+	unsigned int n, l, i;
 	dog_t *dog;
 
-	while (name[i] != '\0')
-	i++;
-	while (owner[j] != '\0')
-	j++;
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
-	{
-		free(dog);
 		return (NULL);
-	}
-	dog->name = malloc(i * sizeof(dog->name));
+	for (n = 0; name[n]; n++)
+		;
+	n++;
+	dog->name = malloc(n * sizeof(char));
 	if (dog->name == NULL)
 	{
-		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
-	for (k = 0; k <= i; k++)
-	{
-		dog->name[k] = name[k];
-		dog->age = age;
-		dog->owner = malloc(j * sizeof(dog->owner));
-	}
+	for (i = 0; i < n; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (l = 0; owner[l]; l++)
+		;
+	l++;
+	dog->owner = malloc(l * sizeof(char));
 	if (dog->owner == NULL)
 	{
-		free(dog->owner);
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
-	for (k = 0; k <= j; k++)
-	dog->owner[k] = owner[k];
+	for (i = 0; i < l; i++)
+		dog->owner[i] = owner[i];
 	return (dog);
 }

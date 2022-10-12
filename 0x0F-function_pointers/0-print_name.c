@@ -3,9 +3,8 @@
 
 /**
  *print_name - called function that prints the name
- *name: name to ne printed
- *char: character to printed
- *f: function poiner to print name
+ *@name: name to ne printed
+ *@f: function poiner to print name
  */
 
 void print_name(char *name, void (*f)(char *))
